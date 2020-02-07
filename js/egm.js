@@ -23,6 +23,15 @@ const WAYS_WE_ENGAGE = {
   "Unlocking Private Investment;": 5
 };
 
+function getKeyByValue(object, value) { 
+  for (var prop in object) { 
+      if (object.hasOwnProperty(prop)) { 
+          if (object[prop] === value) 
+          return prop; 
+      } 
+  } 
+} 
+
 const matrixCellComponent = {
   props: ["count", "color_base"],
   template: `<div
@@ -32,8 +41,9 @@ const matrixCellComponent = {
                     <a
                         class="count"
                         data-toggle="modal"
-                        data-target="#exampleModal"
+                        data-target="#documentListModal"
                         v-show="count > 0"
+                        v-on:click="$emit('cell-clicked')"
                         >{{count}}</a
                       >
                     </div>`
@@ -62,14 +72,40 @@ const app = new Vue({
     },
     documents: [],
     filtered_documents: [],
-    filter_categories: {}
+    clicked_way: '',
+    clicked_value: '',
+    clicked_value_text: '',
+    modal_documents: [],
+    filter_categories: {},
+    document_detail_id: "",
   },
   mounted: async function () {
+    let uri = window.location.search.substring(1); 
+    let params = new URLSearchParams(uri);
+    this.document_detail_id = params.get("docid") ? params.get("docid") : '';
     const response = await axios.get('data/latest.json', { responseType: 'json' });
     this.documents = response.data.records;
     this.filtered_documents = this.documents;
     this.filtered_summary = this.filter_records();
     this.filter_categories = response.data.filteredFields;
+
+    // register page changes when the back button is pressed
+    let vue_object = this;
+    window.onpopstate = function(e){
+      if(e.state){
+        vue_object.document_detail_id = e.state.docid ? e.state.docid : '';
+      }
+  };
+  },
+  computed: {
+    document_details: function() {
+      if(this.document_detail_id == '') {
+        return {}
+      }
+      else {
+        return this.documents.find(doc => doc['Document ID'] == this.document_detail_id)
+      }
+    }
   },
 
   methods: {
@@ -117,6 +153,35 @@ const app = new Vue({
     },
     filter_change: function () {
       this.filter_records();
+    },
+    setDocumentDetail: function(docid) {
+      this.document_detail_id = docid;
+      window.history.pushState({'docid' : docid }, 'USAID Evidence Gap Map', '/?docid=' + docid)
+      $("#documentListModal").modal('hide')
+    },
+    clearDocumentDetail: function() {
+      this.document_detail_id = '';
+      window.history.pushState({}, 'USAID Evidence Gap Map', '/' )
+    },
+    filterDocModal: function(way_engage_index, value_index) {
+        var way = getKeyByValue(WAYS_WE_ENGAGE, way_engage_index); 
+        this.clicked_way = way;
+        if( value_index < 5 ) { // Some nasty hardcoding here to say it is a PSE Value
+          var value = getKeyByValue(PSE_VALUES, value_index)
+          var value_key = 'PSE Key Values'
+          this.clicked_value_text = 'PSE Key Value';
+        }
+        else {
+          var value = getKeyByValue(PSE_UNITAID_VALUES, value_index)
+          var value_key = 'PSE Key Values USAID Offers'
+          this.clicked_value_text = 'PSE Key Value USAID Offers';
+        }
+        this.clicked_value = value;
+        
+        this.modal_documents = this.filtered_documents.filter(function (doc) {
+          return doc['PSE Ways We Engage'] && doc['PSE Ways We Engage'].includes(way) && 
+                 doc[value_key] && doc[value_key].includes(value);
+        })
     }
   }
 });
