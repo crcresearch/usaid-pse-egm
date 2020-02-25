@@ -1173,7 +1173,7 @@
         <header>
           <!-- Fixed navbar -->
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <router-link :to="{name: 'egm'}" class="navbar-brand"><i class="fas fa-chevron-left mr-2"></i> Evidence Gap Map</router-link>
+            <a @click="$router.go(-1)" class="navbar-brand btn"><i class="fas fa-chevron-left mr-2"></i> Evidence Gap Map</a>
           </nav>
         </header>
         <!-- <div v-if="loading" class="d-flex justify-content-center">
