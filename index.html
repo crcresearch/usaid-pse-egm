@@ -1801,7 +1801,7 @@
       </div>
     </script>
     <script type="text/x-template" id="matrix-cell-component" src="js/components/matrix-cell-component.js">
-      <div class="square" v-bind:style="{ background: 'rgba(' + color_base + ',' + count/50 + ')'}">
+      <div class="square" v-bind:style="{ background: 'rgba(' + color_base + ',' + count/100 + ')'}">
         <a class="count" v-show="count > 0" @click="$emit('show-docs-modal')" v-bind:style="{ color: 'rgb(' + color_base + ')'}">
           {{count}}
         </a>
