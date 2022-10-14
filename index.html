@@ -6,8 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <title>USAID Evidence Gap Map</title>
+    <meta role="banner" name="description" content="" />
+    <title role="banner" >USAID Evidence Gap Map</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -71,40 +71,40 @@
             <div class="col-lg-9">
               <div class="row brand-line">
                 <div class="col-sm-3 py-3">
-                  <a href="https://www.usaid.gov" target ="_blank">
+                  <button tabindex="0" class="router-button"  onclick="location.href='https://www.usaid.gov'" target ="_blank">
                   <img
                     src="images/usaid-logo.png"
                     class="img-fluid img-65"
                     alt="USAID Dame"
                   />
-                  </a>
+                  </button>
                 </div>
                 <div class="col-sm-3 py-3">
-                  <a href="https://stemedhub.org/groups/laserpulse/aboutus" target ="_blank">
+                  <button tabindex="0" class="router-button"  onclick="location.href='https://stemedhub.org/groups/laserpulse/aboutus'" target ="_blank">
                   <img
                     src="images/purdue-laser-pulse.png"
                     class="img-fluid img-65"
                     alt="Purdue LASER PULSE logo"
                   />
-                  </a>
+                  </button>
                 </div>
                 <div class="col-sm-3 py-3">
-                  <a href="https://www.nd.edu" target ="_blank">
+                  <button tabindex="0" class="router-button"  onclick="location.href='https://www.nd.edu'" target ="_blank">
                   <img
                     src="images/nd_mark_blue.png"
                     class="img-fluid img-50"
                     alt="Notre Dame logo"
                   />
-                  </a>
+                  </button>
                 </div>
                 <div class="col-sm-3 py-3">
-                  <a href="https://www.purdue.edu" target ="_blank">
+                  <button tabindex="0" class="router-button"  onclick="location.href='https://www.purdue.edu'" target ="_blank">
                   <img
                     src="images/purdue.png"
                     class="img-fluid img-50"
                     alt="Purdue logo"
                   />
-                </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -117,16 +117,15 @@
           <div class="col-md-6">
             <p class="text-white-50 mb-0 text-center text-md-left">
               Copyright &copy; 2020
-              <a class="text-reset" href="https://www.nd.edu"
-                >University of Notre Dame</a
-              >
+              <button tabindex="0" class="router-button"  onclick="location.href='https://www.nd.edu'" class="text-reset" >
+                University of Notre Dame</button>
+
             </p>
           </div>
           <div class="col-md-6">
             <p class="text-white-50 mb-0 text-center text-md-right">
-              <a class="text-reset" href="https://pulte.nd.edu"
-                >Pulte Institute for Global Development</a
-              >
+              <button tabindex="0" class="router-button text-reset"  onclick="location.href='https://pulte.nd.edu'"
+              >Pulte Institute for Global Development</button>
             </p>
           </div>
         </div>
@@ -137,11 +136,16 @@
       <div>
         <header>
           <div class="bg-dark">
+            <!-- <div>
+              <p class="p-inst text-soft mt-2 mb-0 d-none d-md-block jump" >
+                <button class = "router-button" onclick="location.href='#Body'" tabindex="0">Content</button>
+              </p>
+            </div> -->
             <div class="container" id="top-container">
               <div class="row mt-3 mb-2 align-items-center">
                 <div class="col-md-6 col-lg-5">
                   <h1 id="egm-title" class="my-0 text-vb-lt-blue"><span>Private Sector Engagement</span><br/>Evidence Gap Map</h1>
-                  <h5 id="egm-tagline" class="mt-1 mb-0 text-soft font-weight-light">Engagement mapped to key values</h5>
+                  <h2 id="egm-tagline" class="mt-1 mb-0 text-soft font-weight-light header5" >Engagement mapped to key values</h2>
                 </div>
                 <div class="col-md-6 col-lg-7">
                   <p class="p-inst text-soft mt-2 mb-0 d-none d-md-block">
@@ -152,7 +156,7 @@
             </div>
           </div>
           <!-- NAVBAR -->
-          <nav class="navbar navbar-expand-md navbar-dark bg-dark"> 
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="menubar"> 
             <!--    <a class="navbar-brand" href="index.html">PSE Evidence Gap Map</a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -162,11 +166,11 @@
                     <!-- <li class="nav-item">
                       <a class="nav-link" href="#">Instructions</a>
                     </li> -->
-                    <li class="nav-item">
-                      <a class="nav-link" href="./faq.html">FAQ</a>
+                    <li class="nav-item" role="menuitem">
+                      <button tabindex="0" class="nav-link nav-button" onclick="location.href='./faq.html'">FAQ</button>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./files/EVIDENCE_GAP_MAP_USER_MANUAL.pdf" target="_blank">EGM Instructions</a>
+                    <li class="nav-item" role="menuitem" >
+                      <button  tabindex="0"class="nav-link nav-button" onclick="location.href='./files/EVIDENCE_GAP_MAP_USER_MANUAL.pdf'" target="_blank">EGM Instructions</button>
                     </li>
                   </ul>
                 </div>
@@ -181,11 +185,11 @@
                     <li class="nav-item">
                       <a class="nav-link disabled" href="#">View:</a>
                     </li>
-                    <li class="nav-item">
-                      <router-link :to="{name: 'egm'}" class="nav-link text-uppercase">Map</router-link>
+                    <li class="nav-item "  >
+                      <router-link tabindex="0" :to="{name: 'egm'}" class="nav-link text-uppercase nav-button" tag="button">Map</router-link>
                     </li>
                     <li class="nav-item">
-                      <router-link :to="{name: 'list'}" class="nav-link text-uppercase">List</router-link>
+                      <router-link tabindex="0"  :to="{name: 'list'}" class="nav-link text-uppercase nav-button" tag="button">List</router-link>
                     </li>
                     
                   </ul>
@@ -193,7 +197,7 @@
               </div>
 
 
-              <div class="row no-gutters align-items-center">
+              <div class="row no-gutters align-items-center" role="menubar">
 
                 <div class="col-md-11">
                   <div class="row no-gutters filters" id="filter-row">
@@ -201,8 +205,8 @@
 
 
                     <div class="col-md-2">
-                      <vue-multiselect v-model="filters.region" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['USAID Region']" @input="filter_change" >
-                        <template slot="selection" slot-scope="{ values }">
+                      <vue-multiselect role="menu" v-model="filters.region" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['USAID Region']" @input="filter_change">
+                        <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }" >
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
                           <span class="multiselect__single" v-else-if="values.length === 1">{{ values[0] }}</span>
                           <span class="multiselect__single" v-else>USAID Region</span>
@@ -217,8 +221,8 @@
                       </select> -->
                     </div>
                     <div class="col-md-2">
-                      <vue-multiselect v-model="filters.country" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Country(ies)']" @input="filter_change" >
-                        <template slot="selection" slot-scope="{ values }">
+                      <vue-multiselect role="menu" v-model="filters.country" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Country(ies)']" @input="filter_change" >
+                        <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
                           <span class="multiselect__single" v-else-if="values.length === 1">{{ values[0] }}</span>
                           <span class="multiselect__single" v-else>Country(ies)</span>
@@ -230,8 +234,8 @@
                       </vue-multiselect>
                     </div>
                     <div class="col-md-2">
-                      <vue-multiselect v-model="filters.technical_sector" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Technical Sector']" @input="filter_change">
-                        <template slot="selection" slot-scope="{ values }">
+                      <vue-multiselect role="menu" v-model="filters.technical_sector" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Technical Sector']" @input="filter_change">
+                        <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
                           <span class="multiselect__single" v-else-if="values.length === 1">{{ values[0] }}</span>
                           <span class="multiselect__single" v-else>Technical Sector</span>
@@ -240,8 +244,8 @@
                       </vue-multiselect>
                     </div>
                     <div class="col-md-2">
-                      <vue-multiselect v-model="filters.industry" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Private Sector Industry']" @input="filter_change">
-                        <template slot="selection" slot-scope="{ values }">
+                      <vue-multiselect role="menu" v-model="filters.industry" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Private Sector Industry']" @input="filter_change">
+                        <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
                           <span class="multiselect__single" v-else-if="values.length === 1">{{ values[0] }}</span>
                           <span class="multiselect__single" v-else>Private Sector Industry</span>
@@ -256,8 +260,8 @@
                       </select> -->
                     </div>
                     <div class="col-md-2">
-                      <vue-multiselect v-model="filters.enterprise_type" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Type of Enterprise']" @input="filter_change" >
-                        <template slot="selection" slot-scope="{ values }">
+                      <vue-multiselect role="menuitem" v-model="filters.enterprise_type" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Type of Enterprise']" @input="filter_change" >
+                        <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
                           <span class="multiselect__single" v-else-if="values.length === 1">{{ values[0] }}</span>
                           <span class="multiselect__single" v-else>Type of Enterprise</span>
@@ -272,8 +276,8 @@
                       </select> -->
                     </div>
                     <div class="col-md-2">
-                      <vue-multiselect v-model="filters.resource_type" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Type of Document']" @input="filter_change" >
-                        <template slot="selection" slot-scope="{ values }">
+                      <vue-multiselect role="menu" v-model="filters.resource_type" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Type of Document']" @input="filter_change" >
+                        <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
                           <span class="multiselect__single" v-else-if="values.length === 1">{{ values[0] }}</span>
                           <span class="multiselect__single" v-else>Type of Document</span>
@@ -293,7 +297,7 @@
               </div>
 
               <div class="col-md-1 text-center text-md-left">
-                <a class="btn btn-light btn-sm rounded-pill ml-2 mt-2 mt-md-1 text-small" role="button" title="Reset filters" @click="reset_filters" ><i class="fas fa-redo"></i> Reset</a>
+                <button  tabindex="0" class="btn btn-light btn-sm rounded-pill ml-2 mt-2 mt-md-1 text-small" role="button" title="Reset filters" @click="reset_filters" ><i class="fas fa-redo"></i> Reset</>
               </div>
             </div> <!-- end filters -->
 
@@ -326,10 +330,10 @@
             <div class="row no-gutters d-none d-lg-block">
               <table class="table egm-table" id="combined-table">
                 <thead>
-                <tr>
-                  <th scope="col" class="set-group-title-vert-width"></th>
-                  <th scope="col"></th>
-                  <th scope="colgroup" colspan="5" class="group-title group-title-pse">
+                <tr >
+                  <td scope="col" class="set-group-title-vert-width "> </td>
+                  <td scope="col"></td>
+                  <th scope="colgroup" colspan="5" class="group-title group-title-pse" scope="col" role = "columnheader"  tabindex="0" >
                     Private Sector Value Propositions
                     <!-- <a
                             href="#"
@@ -340,7 +344,7 @@
                       <i class="fas fa-info-circle"></i> 
                     </a>-->
                   </th>
-                  <th scope="colgroup" colspan="5" class="group-title group-title-usaid">
+                  <th scope="colgroup" colspan="5" class="group-title group-title-usaid" role = "columnheader" tabindex="0" >
                     Development Actor Value Propositions
                     <!-- <a
                             tabindex="0" 
@@ -351,56 +355,59 @@
                             data-content="Need Text Here"
                     >
                       <i class="fas fa-info-circle"></i> -->
-                    </a>
+                    <!-- </a> -->
                   </th>
-                  <th scope="col" class=""></th>
-                  <th
-                          scope="col"
-                          class="set-group-title-vert-width"
-                  ></th>
+                  <td scope="col" class=""></td>
+                  <td  scope="col"class="set-group-title-vert-width"></td>
                 </tr>
-                <tr>
-                  <th scope="col"></th>
-                  <th scope="col"></th>
+                <tr id="Body">
+                  <td scope="col"></td>
+                  <td scope="col"></td>
                   <th
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Scale, Sustainability, & Reach"
+                          role = "columnheader"
                   >
                      
-                    <span class="float-right">
-                    <a
+                    <div class="float-right">
+                    <button
+                            class='btn shadow-none'
                             tabindex="0" 
                             data-toggle="popover"
-                            data-trigger="focus"
+                            role="button dialog"
                             data-placement="bottom"
                             title="Scale, Sustainability, & Reach" 
                             data-content="The private sector’s vast financial resources and expertise in market-based solutions have the potential for achieving scale and sustainability in tackling systemic societal challenges. The private sector’s extensive networks and operations provide distribution channels to reach, and communicate with, underserved populations and individuals."
                     >
                       <i class="fas fa-info-circle"></i>
-                    </a>
-                    </span>
+                    </button>
+                  </div>
                     <div class="clip-content">Scale,</div>
                     <div class="clip-content">Sustainability,</div>
                     <div class="clip-content">& Reach</div>
                   </th>
-                  <th
+                  <th     
+                          tabindex="0" 
                           scope="col"
                           class="value"
                           title="Ability to Influence Policy"
+                          role = "columnheader"
                   >
-                    <div class="clip-content">
+                    <div class="clip-content" >
                       <span class="float-right">
-                      <a
+                        <button
+                              class='btn shadow-none'
                               tabindex="0" 
                               data-toggle="popover"
-                              data-trigger="focus"
+                              role="button dialog"
                               data-placement="bottom"
                               title="Ability to Influence Policy" 
                               data-content="The private sector’s ability to deliver what host-country governments seek to achieve—such as improved service-delivery, investment, tax revenues, jobs, and life-saving interventions—gives businesses and investors a strong, knowledgeable voice to inform policy that supports transparent, inclusive economic growth."
                       >
                         <i class="fas fa-info-circle"></i>
-                      </a>
+                      </button>
                       </span>
                     </div>
                     <div class="clip-content">Ability</div>
@@ -408,9 +415,11 @@
                     <div class="clip-content">Policy</div>
                   </th>
                   <th
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Innovation, Expertise, and Capabilities"
+                          role = "columnheader"
                   >
                     <a
                             class="reset-color"
@@ -420,16 +429,17 @@
                     >
                       <div class="clip-content">
                         <span class="float-right">
-                        <a
+                          <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Innovation, Expertise, & Capabilities" 
                                 data-content="Businesses and investors can bring innovation and technologies; entrepreneurship; industry expertise; market-based solutions; distribution networks; investment capacity; and managerial and operational expertise, including risk-management."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
                       </div>
                       <div class="clip-content">Innovation,</div>
@@ -437,112 +447,125 @@
                       <div class="clip-content">& Capabilities</div>
                     </a>
                   </th>
-                  <th
+                  <th     
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Efficiency & Effectiveness"
+                          role = "columnheader"
                   >
                     <div>
                       <span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Efficiency & Effectiveness" 
                                 data-content="With improved systems, processes, and logistics, the private sector can bring more efficiency and effectiveness to achieving outcomes."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                      </button>
                       </span>
                     </div>
                     <div class="clip-content">&nbsp</div>
                     <div class="clip-content">Efficiency </div>
                     <div class="clip-content">& Effectiveness</div>
                   </th>
-                  <th scope="col" class="value" title="Flexibility & Pace">
+                  <th scope="col" class="value" title="Flexibility & Pace" role = "columnheader" tabindex="0">
                     <div>
                         <span class="float-right">
-                        <a
+                          <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Flexibility and Pace" 
                                 data-content="The private sector is often inherently more flexible than the public sector, as it has a financial incentive to respond quickly to opportunities and develop new markets."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
                     </div>
                     <div class="clip-content">&nbsp</div>
                     <div class="clip-content">Flexibility</div>
                     <div class="clip-content">& Pace</div>
                   </th>
-                  <th
+                  <th 
+                          tabindex = "0"
                           scope="col"
                           class="value"
                           title="Strong In-Country Networks & Relationships"
+                          role = "columnheader"
                   >
-                    <div class="clip-content">
+                    <!-- <div class="clip-content"> -->
                         <span class="float-right">
-                        <a
+                          <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Strong In-Country Networks & Relationships" 
                                 data-content="Development Actors have relationships with national and local governments, businesses, faith-based organizations, local community leaders, and civil society that are useful to the private sector in making locally informed plans for market entry, collaboration, and co-investment."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                        Strong</div>
+                    <div class="clip-content">   Strong</div>
                     <div class="clip-content">In-Country</div>
                     <div class="clip-content">Networks</div>
                     <div class="clip-content">& Relationships</div>
                   </th>
                   <th
+                          tabindex = "0"
                           scope="col"
                           class="value"
                           title="Support to Strengthen Enabling Environments"
+                          role="columnheader"
                   >
                     
-                        <div class="clip-content"><span class="float-right">
-                        <a
+                      <span class="float-right">
+                          <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Support to Strengthen Enabling Environments" 
                                 data-content="Working with host-country governments, development actors can help create a stronger enabling environment that fosters transparent, inclusive economic growth. Development actors can support policy and regulatory reform that encourages fair and open competition, institutional reforms and the adoption of standards, and government capacity-building."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
                     
-                    Support</div>
+                   <div class="clip-content"> Support</div>
                     <div class="clip-content">to Strengthen</div>
                     <div class="clip-content">Enabling</div>
                     <div class="clip-content">Environments</div>
                   </th>
                   <th
+                          tabindex = "0"
                           scope="col"
                           class="value"
                           title="Sectoral Expertise & Knowledge"
+                          role = "columnheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
+                          <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Sectoral Expertise & Knowledge" 
                                 data-content="Development actors have wide-ranging technical expertise across development and humanitarian sectors. Development actors offer deep economic, political, conflict, and gender-sensitive understanding of developing markets, market intelligence that can inform and shape private-sector investment, and robust, evidence-based monitoring and evaluation."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
                       </div>
                       <div class="clip-content">Sectoral</div>
@@ -550,22 +573,25 @@
                     <div class="clip-content">& Knowledge</div>
                   </th>
                   <th
+                          tabindex = "0"
                           scope="col"
                           class="value"
                           title="Risk-Mitigation & Flexible Authorities"
+                          role = "columnheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
+                          <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Risk-Mitigation & Flexible Authorities" 
                                 data-content="Development actors can use funds, authorities, and technical expertise to mitigate the risks of investments and “crowd in” public and private resources that further humanitarian and development goals. Development actor technical assistance can ready smaller companies for financing, or help expand their markets."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
                       </div>
                       <div class="clip-content">Risk-Mitigation</div>
@@ -573,30 +599,35 @@
                     <div class="clip-content">Authorities</div>
                   </th>
                   <th
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Reputation & Credible Convening Power"
+                          role = "columnheader"
                   >
                     
-                        <div class="clip-content"><span class="float-right">
-                        <a
+                    <div class="clip-content">
+                        <span class="float-right">
+                          <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Reputation & Credible Convening Power" 
                                 data-content="Development actors have strong capabilities in convening actors around business opportunities that address development challenges. Development actors offer a neutral platform for other actors to collaborate in addressing larger challenges."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                        Reputation</div>
+                      </div>
+                       <div class="clip-content">Reputation</div>
                     <div class="clip-content">& Credible</div>
                     <div class="clip-content">Convening</div>
                     <div class="clip-content">Power</div>
                   </th>
-                  <th scope="col" class=""></th>
-                  <th scope="col" class=""></th>
+                  <td scope="col" class=""></td>
+                  <td scope="col" class=""></td>
                 </tr>
                 </thead>
                 <tbody>
@@ -611,29 +642,34 @@
                               title="We engage in a number of ways..."
                       >
                         <i class="fas fa-info-circle"></i> -->
-                      </a>
+                      <!-- </a> -->
                     </div>
                   </th>
                   <th
+                          tabindex="0"
                           scope="row"
                           class="engage"
                           title="Information-Sharing & Strategic Alignment"
+                          role="rowheader"
+
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
-                                tabindex="0" 
+                          <button
+                                class='btn shadow-none'
+                                tabindex="0"
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="right"
                                 title="Information-Sharing & Strategic Alignment" 
                                 data-content="Engagement that aims to identify shared interests, respective capabilities, and experiences. It does not necessarily entail investment of financial resources."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                    Information</div>
-                    -Sharing
+                      </div>
+                    <div class="clip-content">Information</div>
+                    <div class="clip-content">-Sharing </div>
                     <div class="clip-content">& Strategic</div>
                     <div class="clip-content">Alignment</div>
                   </th>
@@ -651,26 +687,30 @@
                             @show-docs-modal="build_docs_modal({ value_index: index, way_index: 0 })" />
                   </td>
                   <th
+                          tabindex="0"
                           scope="row"
                           class="engage"
                           title="Information-Sharing & Strategic Alignment"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                       <div class="clip-content">
                           <span class="float-right">
-                          <a
-                                  tabindex="0" 
+                          <button
+                            class='btn shadow-none'
+                            tabindex="0"
                                   data-toggle="popover"
-                                  data-trigger="focus"
+                                  role="button dialog"
                                   data-placement="left"
                                   title="Information-Sharing & Strategic Alignment" 
                                   data-content="Engagement that aims to identify shared interests, respective capabilities, and experiences. It does not necessarily entail investment of financial resources."
                           >
                             <i class="fas fa-info-circle"></i>
-                          </a>
+                          </button>
                           </span>
-                      Information</div>
-                    -Sharing
+                        </div>
+                      <div class="clip-content">Information</div>
+                      <div class="clip-content">-Sharing</div>
                     <div class="clip-content">& Strategic</div>
                     <div class="clip-content">Alignment</div>
                   </th>
@@ -687,32 +727,36 @@
                               title="We engage in a number of ways..."
                       >
                         <i class="fas fa-info-circle"></i> -->
-                      </a>
+                      <!-- </a> -->
                     </div>
                   </th>
 
                 </tr>
                 <tr>
                   <th
+                          tabindex="0"
                           scope="row"
                           class="engage"
                           title="Advancing Learning & Market Research"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
-                                tabindex="0" 
+                          <button
+                                class='btn shadow-none'
+                                tabindex="0"
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="right"
                                 title="Advancing Learning & Market Research" 
                                 data-content="Engagement that advances shared market research, good practices for PSE, and joint strategic planning and project design within the USAID Program Cycle."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                    Advancing</div>
-                    Learning & Market Research
+                      </div>
+                  <div class="clip-content">Advancing</div>
+                    <div class="clip-content">Learning & Market Research</div>
                   </th>
 
                   <td v-for="index in [0,1,2,3,4]">
@@ -728,47 +772,55 @@
                             @show-docs-modal="build_docs_modal({ value_index: index, way_index: 1 })" />
                   </td>
                   <th
+                          tabindex="0"
                           scope="row"
                           class="engage"
                           title="Advancing Learning & Market Research"
+                          role="rowheader"
                   >
                     <div class="clip-content"><span class="float-right">
-                      <a
-                              tabindex="0" 
+                      <button
+                            class='btn shadow-none'
+                            tabindex="0" 
                               data-toggle="popover"
-                              data-trigger="focus"
+                              role="button dialog"
                               data-placement="left"
                               title="Advancing Learning & Market Research" 
                               data-content="Engagement that advances shared market research, good practices for PSE, and joint strategic planning and project design within the USAID Program Cycle."
                       >
                         <i class="fas fa-info-circle"></i>
-                      </a>
+                    </button>
                       </span>
-                  Advancing</div>
-                    Learning & Market Research
+                    </div>
+                  <div class="clip-content">Advancing</div>
+                   <div  class="clip-content"> Learning & Market Research</div>
                   </th>
                 </tr>
                 <tr>
                   <th
+                          tabindex="0"
                           scope="row"
                           class="engage"
                           title="Harnessing Private Sector Expertise & Innovation"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
-                                tabindex="0" 
+                          <button
+                                class='btn shadow-none'
+                                tabindex="0"
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="right"
                                 title="Harnessing Private Sector Expertise & Innovation" 
                                 data-content="Engagement that harnesses innovation, technology, research and development, industry expertise, and/or entrepreneurial skills to achieve development outcomes."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                    Harnessing</div>
-                    Private Sector
+                      </div>
+                    <div class="clip-content">Harnessing</div>
+                    <div class="clip-content">Private Sector</div>
                     <div class="clip-content">Expertise</div>
                     <div class="clip-content">& Innovation</div>
                   </th>
@@ -786,145 +838,166 @@
                             @show-docs-modal="build_docs_modal({ value_index: index, way_index: 2 })" />
                   </td>
                   <th
+                          tabindex="0"
                           scope="row"
                           class="engage"
                           title="Harnessing Private Sector Expertise & Innovation"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                       <span class="float-right">
-                      <a
-                              tabindex="0" 
+                        <button
+                              class='btn shadow-none'
+                              tabindex="0"
                               data-toggle="popover"
-                              data-trigger="focus"
+                              role="button dialog"
                               data-placement="left"
                               title="Harnessing Private Sector Expertise & Innovation" 
                               data-content="Engagement that harnesses innovation, technology, research and development, industry expertise, and/or entrepreneurial skills to achieve development outcomes."
                       >
                         <i class="fas fa-info-circle"></i>
-                      </a>
+                      </button>
                       </span>
-                    Harnessing</div>
-                    Private Sector
+                    </div>
+                    <div class="clip-content">Harnessing</div>
+                   <div class="clip-content"> Private Sector</div>
                     <div class="clip-content">Expertise</div>
                     <div class="clip-content">& Innovation</div>
                   </th>
                 </tr>
                 <tr>
                   <th
+                          tabindex = "0"
                           scope="row"
                           class="engage"
                           title="Catalyzing Private Sector Resources"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
+                          <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="right"
                                 title="Catalyzing Private Sector Resources" 
                                 data-content="Engagement that mobilizes private-sector resources and action – including philanthropy and CSR assets – to address a specific issue and/or objective. This category also includes the unlocking of private investment."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                    Catalyzing</div>
-                    Private Sector
+                      </div>
+                    <div class="clip-content">Catalyzing</div>
+                    <div class="clip-content">Private Sector</div>
                     <div class="clip-content">Resources</div>
                   </th>
 
-                  <td v-for="index in [0,1,2,3,4]">
+                  <td v-for="index in [0,1,2,3,4]" tabindex = "0">
                     <matrix-cell
                             v-bind:count="filtered_summary[3][index]"
                             color_base="61,155,180"
-                            @show-docs-modal="build_docs_modal({ value_index: index, way_index: 3 })" />
+                            @show-docs-modal="build_docs_modal({ value_index: index, way_index: 3 })"
+                            tabindex = "0"/>
                   </td>
 
-                  <td v-for="index in [5,6,7,8,9]">
+                  <td v-for="index in [5,6,7,8,9]" tabindex = "0">
                     <matrix-cell
                             v-bind:count="filtered_summary[3][index]"
                             color_base="0,47,108"
                             @show-docs-modal="build_docs_modal({ value_index: index, way_index: 3 })" />
                   </td>
                   <th
+                          tabindex = "0"
                           scope="row"
                           class="engage"
                           title="Catalyzing Private Sector Resources"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                       <span class="float-right">
-                      <a
-                              tabindex="0" 
+                      <button
+                              class='btn shadow-none'
+                              tabindex="0"  
                               data-toggle="popover"
-                              data-trigger="focus"
+                              role="button dialog"
                               data-placement="left"
                               title="Catalyzing Private Sector Resources" 
                               data-content="Engagement that mobilizes private-sector resources and action – including philanthropy and CSR assets – to address a specific issue and/or objective. This category also includes the unlocking of private investment."
                       >
                         <i class="fas fa-info-circle"></i>
-                      </a>
+                      </button>
                       </span>
-                    Catalyzing</div>
-                    Private Sector
+                    </div>
+                    <div class="clip-content">Catalyzing</div>
+                    <div class= "clip-content">Private Sector</div>
                     <div class="clip-content">Resources</div>
                   </th>
                 </tr>
                 <tr>
                   <th
+                          tabindex = "0"
                           scope="row"
                           class="engage"
                           title="Strengthening the Enabling Environment"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
+                          <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="right"
                                 title="Strengthening the Enabling Environment" 
                                 data-content="Engagement on issues of importance to multiple U.S. and local private-sector actors, such as regulatory reforms, policy, compliance with standards, and government capacity building."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                    Strengthening</div>
-                    the Enabling
+                      </div>
+                    <div class="clip-content">Strengthening</div>
+                    <div class= "clip-content">the Enabling</div>
                     <div class="clip-content">Environment</div>
                   </th>
 
-                  <td v-for="index in [0,1,2,3,4]">
+                  <td v-for="index in [0,1,2,3,4]" tabindex = "0">
                     <matrix-cell
                             v-bind:count="filtered_summary[4][index]"
                             color_base="61,155,180"
                             @show-docs-modal="build_docs_modal({ value_index: index, way_index: 4 })" />
                   </td>
-                  <td v-for="index in [5,6,7,8,9]">
+                  <td v-for="index in [5,6,7,8,9]" tabindex = "0"> 
                     <matrix-cell
                             v-bind:count="filtered_summary[4][index]"
                             color_base="0,47,108"
                             @show-docs-modal="build_docs_modal({ value_index: index, way_index: 4 })" />
                   </td>
                   <th
+                          tabindex="0"
                           scope="row"
                           class="engage"
                           title="Strengthening the Enabling Environment"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                       <span class="float-right">
-                      <a
+                        <button
+                              class='btn shadow-none'
                               tabindex="0" 
                               data-toggle="popover"
-                              data-trigger="focus"
+                              role="button dialog"
                               data-placement="left"
                               title="Strengthening the Enabling Environment" 
                               data-content="Engagement on issues of importance to multiple U.S. and local private-sector actors, such as regulatory reforms, policy, compliance with standards, and government capacity building."
                       >
                         <i class="fas fa-info-circle"></i>
-                      </a>
+                      </button>
                       </span>
-                    Strengthening</div>
-                    the Enabling
+                    </div>
+                    <div class="clip-content">Strengthening</div>
+                    <div class="clip-content">the Enabling</div>
                     <div class="clip-content">Environment</div>
                   </th>
                 </tr>
@@ -939,9 +1012,9 @@
                 <table class="table egm-table" id="pse-table">
                   <thead>
                   <tr>
-                    <th scope="col" class="set-group-title-vert-width"></th>
-                    <th scope="col"></th>
-                    <th scope="colgroup" colspan="5" class="group-title">
+                    <td scope="col" class="set-group-title-vert-width"></td>
+                    <td scope="col"></td>
+                    <th scope="colgroup" colspan="5" class="group-title " tabindex="0" role="columnheader">
                       Private Sector Value Propositions
                       <!-- <a
                               data-toggle="tooltip"
@@ -954,48 +1027,57 @@
                       </a> -->
                     </th>
                   </tr>
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th
+                  <tr id="Body">
+                    <td></td>
+                    <td></td>
+                  
+                    <!-- <th scope="col"></th>
+                    <th scope="col"></th> -->
+                    <th 
+                          tabindex = "0"
                           scope="col"
                           class="value"
                           title="Scale, Sustainability, & Reach"
+                          role = "columnheader"
                   >
                      
                     <span class="float-right">
-                    <a
+                    <button
                             tabindex="0" 
+                            class='btn shadow-none'
                             data-toggle="popover"
-                            data-trigger="focus"
+                            role="button dialog"
                             data-placement="bottom"
                             title="Scale, Sustainability, & Reach" 
                             data-content="The private sector’s vast financial resources and expertise in market-based solutions have the potential for achieving scale and sustainability in tackling systemic societal challenges. The private sector’s extensive networks and operations provide distribution channels to reach, and communicate with, underserved populations and individuals."
                     >
                       <i class="fas fa-info-circle"></i>
-                    </a>
+                    </button>
                     </span>
                     <div class="clip-content">Scale,</div>
                     <div class="clip-content">Sustainability,</div>
                     <div class="clip-content">& Reach</div>
                   </th>
-                  <th
+                  <th     
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Ability to Influence Policy"
+                          role = "columnheader"
                   >
                     <div class="clip-content">
                       <span class="float-right">
-                      <a
+                      <button
+                              class='btn shadow-none'
                               tabindex="0" 
                               data-toggle="popover"
-                              data-trigger="focus"
+                              role="button dialog"
                               data-placement="bottom"
                               title="Ability to Influence Policy" 
                               data-content="The private sector’s ability to deliver what host-country governments seek to achieve—such as improved service-delivery, investment, tax revenues, jobs, and life-saving interventions—gives businesses and investors a strong, knowledgeable voice to inform policy that supports transparent, inclusive economic growth."
                       >
                         <i class="fas fa-info-circle"></i>
-                      </a>
+                      </button>
                       </span>
                     </div>
                     <div class="clip-content">Ability</div>
@@ -1003,9 +1085,12 @@
                     <div class="clip-content">Policy</div>
                   </th>
                   <th
+
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Innovation, Expertise, and Capabilities"
+                          role = "columnheader"
                   >
                     <a
                             class="reset-color"
@@ -1015,16 +1100,17 @@
                     >
                       <div class="clip-content">
                         <span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Innovation, Expertise, & Capabilities" 
                                 data-content="Businesses and investors can bring innovation and technologies; entrepreneurship; industry expertise; market-based solutions; distribution networks; investment capacity; and managerial and operational expertise, including risk-management."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
                       </div>
                       <div class="clip-content">Innovation,</div>
@@ -1032,42 +1118,46 @@
                       <div class="clip-content">& Capabilities</div>
                     </a>
                   </th>
-                  <th
+                  <th     
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Efficiency & Effectiveness"
+                          role = "columnheader"
                   >
                     <div>
                       <span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Efficiency & Effectiveness" 
                                 data-content="With improved systems, processes, and logistics, the private sector can bring more efficiency and effectiveness to achieving outcomes."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                      </button>
                       </span>
                     </div>
                     <div class="clip-content">&nbsp</div>
                     <div class="clip-content">Efficiency </div>
                     <div class="clip-content">& Effectiveness</div>
                   </th>
-                  <th scope="col" class="value" title="Flexibility & Pace">
+                  <th tabindex="0" scope="col" class="value" title="Flexibility & Pace" role = "columnheader">
                     <div>
                         <span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button"
                                 data-placement="bottom"
                                 title="Flexibility and Pace" 
                                 data-content="The private sector is often inherently more flexible than the public sector, as it has a financial incentive to respond quickly to opportunities and develop new markets."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
                     </div>
                     <div class="clip-content">&nbsp</div>
@@ -1088,33 +1178,37 @@
                                 title="We engage in a number of ways..."
                         >
                           <i class="fas fa-info-circle"></i> -->
-                        </a>
+                        <!-- </a> -->
                       </div>
                     </th>
                   <th
+                          tabindex="0"
                           scope="row"
                           class="engage"
                           title="Information-Sharing & Strategic Alignment"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="right"
                                 title="Information-Sharing & Strategic Alignment" 
                                 data-content="Engagement that aims to identify shared interests, respective capabilities, and experiences. It does not necessarily entail investment of financial resources."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                    Information</div>
-                    -Sharing
+                      </div>
+                    <div class="clip-content">Information</div>
+                    <div class="clip-content">-Sharing</div>
                     <div class="clip-content">& Strategic</div>
                     <div class="clip-content">Alignment</div>
                   </th>
-                    <td v-for="index in [0,1,2,3,4]">
+                    <td v-for="index in [0,1,2,3,4]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[0][index]"
                               color_base="61,155,180"
@@ -1124,28 +1218,32 @@
                   </tr>
                   <tr>
                     <th
+                            tabindex="0"
                             scope="row"
                             class="engage"
                             title="Advancing Learning & Market Research"
+                            role="rowheader"
                     >
                       <div class="clip-content">
                           <span class="float-right">
-                          <a
+                          <button
+                                  class='btn shadow-none'
                                   tabindex="0" 
                                   data-toggle="popover"
-                                  data-trigger="focus"
+                                  role="button dialog"
                                   data-placement="right"
                                   title="Advancing Learning & Market Research" 
                                   data-content="Engagement that advances shared market research, good practices for PSE, and joint strategic planning and project design within the USAID Program Cycle."
                           >
                             <i class="fas fa-info-circle"></i>
-                          </a>
+                          </button>
                           </span>
-                      Advancing</div>
-                      Learning & Market Research
+                        </div>
+                     <div class="clip-content"> Advancing</div>
+                      <div class="clip-content">Learning & Market Research</div>
                     </th>
 
-                    <td v-for="index in [0,1,2,3,4]">
+                    <td v-for="index in [0,1,2,3,4]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[1][index]"
                               color_base="61,155,180"
@@ -1154,30 +1252,34 @@
                   </tr>
                   <tr>
                     <th
+                            tabindex="0"
                             scope="row"
                             class="engage"
                             title="Harnessing Private Sector Expertise & Innovation"
+                            role="rowheader"
                     >
                       <div class="clip-content">
                           <span class="float-right">
-                          <a
+                          <button
+                                 class='btn shadow-none'
                                   tabindex="0" 
                                   data-toggle="popover"
-                                  data-trigger="focus"
+                                  role="button dialog"
                                   data-placement="right"
                                   title="Harnessing Private Sector Expertise & Innovation" 
                                   data-content="Engagement that harnesses innovation, technology, research and development, industry expertise, and/or entrepreneurial skills to achieve development outcomes."
                           >
                             <i class="fas fa-info-circle"></i>
-                          </a>
+                          </button>
                           </span>
-                      Harnessing</div>
-                      Private Sector
+                        </div>
+                     <div class="clip-content"> Harnessing</div>
+                      <div class="clip-content">Private Sector</div>
                       <div class="clip-content">Expertise</div>
                       <div class="clip-content">& Innovation</div>
                     </th>
 
-                    <td v-for="index in [0,1,2,3,4]">
+                    <td v-for="index in [0,1,2,3,4]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[2][index]"
                               color_base="61,155,180"
@@ -1186,29 +1288,33 @@
                   </tr>
                   <tr>
                     <th
+                            tabindex="0"
                             scope="row"
                             class="engage"
                             title="Catalyzing Private Sector Resources"
+                            role="rowheader"
                     >
                       <div class="clip-content">
                           <span class="float-right">
-                          <a
+                          <button
+                                  class='btn shadow-none'
                                   tabindex="0" 
                                   data-toggle="popover"
-                                  data-trigger="focus"
+                                  role="button dialog"
                                   data-placement="right"
                                   title="Catalyzing Private Sector Resources" 
                                   data-content="Engagement that mobilizes private-sector resources and action – including philanthropy and CSR assets – to address a specific issue and/or objective. This category also includes the unlocking of private investment."
                           >
                             <i class="fas fa-info-circle"></i>
-                          </a>
+                          </button>
                           </span>
-                      Catalyzing</div>
-                      Private Sector
+                        </div>
+                     <div class="clip-content"> Catalyzing</div>
+                     <div class="clip-content">Private Sector </div>
                       <div class="clip-content">Resources</div>
                     </th>
 
-                    <td v-for="index in [0,1,2,3,4]">
+                    <td v-for="index in [0,1,2,3,4]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[3][index]"
                               color_base="61,155,180"
@@ -1217,29 +1323,33 @@
                   </tr>
                   <tr>
                     <th
+                            tabindex="0"
                             scope="row"
                             class="engage"
                             title="Strengthening the Enabling Environment"
+                            role="rowheader"
                     >
                       <div class="clip-content">
                           <span class="float-right">
-                          <a
+                          <button
+                                  class='btn shadow-none'
                                   tabindex="0" 
                                   data-toggle="popover"
-                                  data-trigger="focus"
+                                  role="button dialog"
                                   data-placement="right"
                                   title="Strengthening the Enabling Environment" 
                                   data-content="Engagement on issues of importance to multiple U.S. and local private-sector actors, such as regulatory reforms, policy, compliance with standards, and government capacity building."
                           >
                             <i class="fas fa-info-circle"></i>
-                          </a>
+                          </button>
                           </span>
-                      Strengthening</div>
-                      the Enabling
+                        </div>
+                     <div class="clip-content"> Strengthening</div>
+                      <div class="clip-content"> the Enabling </div>
                       <div class="clip-content">Environment</div>
                     </th>
 
-                    <td v-for="index in [0,1,2,3,4]">
+                    <td v-for="index in [0,1,2,3,4]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[4][index]"
                               color_base="61,155,180"
@@ -1253,12 +1363,12 @@
                 <table class="table egm-table mt-4 mt-lg-0" id="usaid-table">
                   <thead>
                   <tr>
-                    <th
+                    <td
                             scope="col"
                             class="d-lg-none set-group-title-vert-width"
-                    ></th>
-                    <th scope="col" class="d-lg-none"></th>
-                    <th scope="colgroup" colspan="5" class="group-title">
+                    ></td>
+                    <td scope="col" class="d-lg-none"></td>
+                    <th scope="colgroup" colspan="5" class="group-title" role="columnheader" tabindex="0">
                       Development Actor Value Propositions
                       <!-- <a
                               href="#"
@@ -1269,79 +1379,89 @@
                         <i class="fas fa-info-circle"></i>
                       </a> -->
                     </th>
-                    <th scope="col" class="d-none d-lg-table-cell"></th>
-                    <th
+                    <td scope="col" class="d-none d-lg-table-cell"></td>
+                    <td
                             scope="col"
                             class="d-none d-lg-table-cell set-group-title-vert-width"
-                    ></th>
+                    ></td>
                   </tr>
                   <tr>
-                    <th scope="col" class="d-lg-none"></th>
-                    <th scope="col" class="d-lg-none"></th>
+                    <td scope="col" class="d-lg-none"></td>
+                    <td scope="col" class="d-lg-none"></td>
                     <th
+                          tabindex ="0"
                           scope="col"
                           class="value"
                           title="Strong In-Country Networks & Relationships"
+                          role = "columnheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Strong In-Country Networks & Relationships" 
                                 data-content="Development Actors have relationships with national and local governments, businesses, faith-based organizations, local community leaders, and civil society that are useful to the private sector in making locally informed plans for market entry, collaboration, and co-investment."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                    Strong</div>
+                      </div>
+                   <div class="clip-content"> Strong</div>
                     <div class="clip-content">In-Country</div>
                     <div class="clip-content">Networks</div>
                     <div class="clip-content">& Relationships</div>
                   </th>
                   <th
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Support to Strengthen Enabling Environments"
+                          role = "columnheader"
                   >
                     
                         <div class="clip-content"><span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Support to Strengthen Enabling Environments" 
                                 data-content="Working with host-country governments, development actors can help create a stronger enabling environment that fosters transparent, inclusive economic growth. Development actors can support policy and regulatory reform that encourages fair and open competition, institutional reforms and the adoption of standards, and government capacity-building."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                    
-                    Support</div>
+                      </div>
+                    <div class="clip-content"> Support</div>
                     <div class="clip-content">to Strengthen</div>
                     <div class="clip-content">Enabling</div>
                     <div class="clip-content">Environments</div>
                   </th>
                   <th
+                          tabindex = "0"
                           scope="col"
                           class="value"
                           title="Sectoral Expertise & Knowledge"
+                          role = "columnheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Sectoral Expertise & Knowledge" 
                                 data-content="Development actors have wide-ranging technical expertise across development and humanitarian sectors. Development actors offer deep economic, political, conflict, and gender-sensitive understanding of developing markets, market intelligence that can inform and shape private-sector investment, and robust, evidence-based monitoring and evaluation."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
                     </div>
                     <div class="clip-content">Sectoral</div>
@@ -1349,22 +1469,25 @@
                     <div class="clip-content">& Knowledge</div>
                   </th>
                   <th
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Risk-Mitigation & Flexible Authorities"
+                          role = "columnheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Risk-Mitigation & Flexible Authorities" 
                                 data-content="Development actors can use funds, authorities, and technical expertise to mitigate the risks of investments and “crowd in” public and private resources that further humanitarian and development goals. Development actor technical assistance can ready smaller companies for financing, or help expand their markets."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
                     </div>
                     <div class="clip-content">Risk-Mitigation</div>
@@ -1372,30 +1495,34 @@
                     <div class="clip-content">Authorities</div>
                   </th>
                   <th
+                          tabindex="0"
                           scope="col"
                           class="value"
                           title="Reputation & Credible Convening Power"
+                          role = "columnheader"
                   >
                     
                         <div class="clip-content"><span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none'
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="bottom"
                                 title="Reputation & Credible Convening Power" 
                                 data-content="Development actors have strong capabilities in convening actors around business opportunities that address development challenges. Development actors offer a neutral platform for other actors to collaborate in addressing larger challenges."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                        Reputation</div>
+                      </div>
+                     <div class="clip-content"> Reputation</div>
                     <div class="clip-content">& Credible</div>
                     <div class="clip-content">Convening</div>
                     <div class="clip-content">Power</div>
                   </th>
-                    <th scope="col" class="d-none d-lg-table-cell"></th>
-                    <th scope="col" class="d-none d-lg-table-cell"></th>
+                    <td scope="col" class="d-none d-lg-table-cell"></td>
+                    <td scope="col" class="d-none d-lg-table-cell"></td>
                   </tr>
                   </thead>
                   <tbody>
@@ -1410,34 +1537,38 @@
                                 title="We engage in a number of ways..."
                         >
                           <i class="fas fa-info-circle"></i> -->
-                        </a>
+                        <!-- </a> -->
                       </div>
                     </th>
                   <th
+                          tabindex="0"
                           scope="row"
                           class="engage"
                           title="Information-Sharing & Strategic Alignment"
+                          role="rowheader"
                   >
                     <div class="clip-content">
                         <span class="float-right">
-                        <a
+                        <button
+                                class='btn shadow-none' 
                                 tabindex="0" 
                                 data-toggle="popover"
-                                data-trigger="focus"
+                                role="button dialog"
                                 data-placement="right"
                                 title="Information-Sharing & Strategic Alignment" 
                                 data-content="Engagement that aims to identify shared interests, respective capabilities, and experiences. It does not necessarily entail investment of financial resources."
                         >
                           <i class="fas fa-info-circle"></i>
-                        </a>
+                        </button>
                         </span>
-                    Information</div>
-                    -Sharing
+                      </div>
+                   <div class="clip-content"> Information</div>
+                    <div class="clip-content">-Sharing</div>
                     <div class="clip-content">& Strategic</div>
                     <div class="clip-content">Alignment</div>
                   </th>
 
-                    <td v-for="index in [5,6,7,8,9]">
+                    <td v-for="index in [5,6,7,8,9]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[0][index]"
                               color_base="0,47,108"
@@ -1455,34 +1586,38 @@
                                 title="We engage in a number of ways..."
                         >
                           <i class="fas fa-info-circle"></i> -->
-                        </a>
+                        <!-- </a> -->
                       </div>
                     </th>
                   </tr>
                   <tr>
                     <th
+                            tabindex="0"
                             scope="row"
                             class="engage"
                             title="Advancing Learning & Market Research"
+                            role="rowheader"
                     >
                       <div class="clip-content">
                           <span class="float-right">
-                          <a
+                          <button
+                                  class='btn shadow-none'
                                   tabindex="0" 
                                   data-toggle="popover"
-                                  data-trigger="focus"
+                                  role="button dialog"
                                   data-placement="right"
                                   title="Advancing Learning & Market Research" 
                                   data-content="Engagement that aims to identify shared interests, respective capabilities, and experiences. It does not necessarily entail investment of financial resources."
                           >
                             <i class="fas fa-info-circle"></i>
-                          </a>
+                          </button>
                           </span>
-                      Advancing</div>
-                      Learning & Market Research
+                        </div>
+                     <div class="clip-content"> Advancing</div>
+                     <div class="clip-content" >Learning & Market Research </div>
                     </th>
 
-                    <td v-for="index in [5,6,7,8,9]">
+                    <td v-for="index in [5,6,7,8,9]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[1][index]"
                               color_base="0,47,108"
@@ -1491,30 +1626,34 @@
                   </tr>
                   <tr>
                     <th
+                            tabindex="0"
                             scope="row"
                             class="engage"
                             title="Harnessing Private Sector Expertise & Innovation"
+                            role="rowheader"
                     >
                       <div class="clip-content">
                           <span class="float-right">
-                          <a
+                          <button
+                                  class='btn shadow-none'
                                   tabindex="0" 
                                   data-toggle="popover"
-                                  data-trigger="focus"
+                                  role="button dialog"
                                   data-placement="right"
                                   title="Harnessing Private Sector Expertise & Innovation" 
                                   data-content="Engagement that harnesses innovation, technology, research and development, industry expertise, and/or entrepreneurial skills to achieve development outcomes."
                           >
                             <i class="fas fa-info-circle"></i>
-                          </a>
+                          </button>
                           </span>
-                      Harnessing</div>
-                      Private Sector
+                        </div>
+                      <div class="clip-content"> Harnessing</div>
+                      <div class="clip-content"> Private Sector</div>
                       <div class="clip-content">Expertise</div>
                       <div class="clip-content">& Innovation</div>
                     </th>
 
-                    <td v-for="index in [5,6,7,8,9]">
+                    <td v-for="index in [5,6,7,8,9]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[2][index]"
                               color_base="0,47,108"
@@ -1523,29 +1662,33 @@
                   </tr>
                   <tr>
                     <th
+                            tabindex="0"
                             scope="row"
                             class="engage"
                             title="Catalyzing Private Sector Resources"
+                            role="rowheader"
                     >
                       <div class="clip-content">
                           <span class="float-right">
-                          <a
+                          <button
+                                  class='btn shadow-none'
                                   tabindex="0" 
                                   data-toggle="popover"
-                                  data-trigger="focus"
+                                  role="button dialog"
                                   data-placement="right"
                                   title="Catalyzing Private Sector Resources" 
                                   data-content="Engagement that mobilizes private-sector resources and action – including philanthropy and CSR assets – to address a specific issue and/or objective. This category also includes the unlocking of private investment."
                           >
                             <i class="fas fa-info-circle"></i>
-                          </a>
+                          </button>
                           </span>
-                      Catalyzing</div>
-                      Private Sector
+                        </div>
+                      <div class="clip-content"> Catalyzing</div>
+                      <div class="clip-content"> Private Sector</div>
                       <div class="clip-content">Resources</div>
                     </th>
 
-                    <td v-for="index in [5,6,7,8,9]">
+                    <td v-for="index in [5,6,7,8,9]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[3][index]"
                               color_base="0,47,108"
@@ -1554,29 +1697,33 @@
                   </tr>
                   <tr>
                     <th
+                            tabindex="0"
                             scope="row"
                             class="engage"
                             title="Strengthening the Enabling Environment"
+                            role="rowheader"
                     >
                       <div class="clip-content">
                           <span class="float-right">
-                          <a
+                          <button
+                                  class='btn shadow-none'
                                   tabindex="0" 
                                   data-toggle="popover"
-                                  data-trigger="focus"
+                                  role="button dialog"
                                   data-placement="right"
                                   title="Strengthening the Enabling Environment" 
                                   data-content="Engagement on issues of importance to multiple U.S. and local private-sector actors, such as regulatory reforms, policy, compliance with standards, and government capacity building."
                           >
                             <i class="fas fa-info-circle"></i>
-                          </a>
+                          </button>
                           </span>
-                      Strengthening</div>
-                      the Enabling
+                        </div>
+                      <div class="clip-content"> Strengthening</div>
+                      <div class="clip-content">the Enabling</div>
                       <div class="clip-content">Environment</div>
                     </th>
 
-                    <td v-for="index in [5,6,7,8,9]">
+                    <td v-for="index in [5,6,7,8,9]" tabindex = "0">
                       <matrix-cell
                               v-bind:count="filtered_summary[4][index]"
                               color_base="0,47,108"
@@ -1608,7 +1755,7 @@
             <h4>Help to Fill the Gaps</h4>
             <p>
               We invite you to contribute documents to add to the map, using this
-              <a href="https://forms.gle/dPC55Lcaq5PyGV6QA">form</a>.
+              <button tabindex="0" class="router-button"  onclick="location.href='https://forms.gle/dPC55Lcaq5PyGV6QA'">form</button>.
             </p>
           </div>
           <!-- /.container -->
@@ -1627,14 +1774,14 @@
               <span class="badge badge-secondary badge-pill" >{{ docs_in_categories[doc_type].length }}</span>
             </h5>
             <ul class="list-group list-group-flush mb-4">
-              <li v-for="(doc, index) in docs_in_categories[doc_type]" :key="index" class="list-group-item">
-                <router-link :to="{ name: 'details', params: { id: doc['Document ID'], document: doc } }" >{{ doc['Document Title'] }}<span v-if="doc['Year']">, <em>{{ doc['Year'] }}</em></span></router-link>
+              <li v-for="(doc, index) in docs_in_categories[doc_type]" :key="index" class="list-group-item" > 
+                <router-link :to="{ name: 'details', params: { id: doc['Document ID'], document: doc } }" tag="button"  class="router-button">{{ doc['Document Title'] }}<span v-if="doc['Year']">, <em>{{ doc['Year'] }}</em></span></router-link>
               </li>
             </ul>
           </div>
         </template>
 
-        
+
 
 </div>
 </script>
@@ -1646,7 +1793,7 @@
         <header>
           <!-- Fixed navbar -->
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <router-link :to="{name: 'egm'}" class="navbar-brand"><i class="fas fa-chevron-left mr-2"></i> Evidence Gap Map</router-link>
+            <router-link :to="{name: 'egm'}" class="navbar-brand" id="focus_modal_button_back"><i class="fas fa-chevron-left mr-2" tag="button" tabindex="0" id="focus_modal_button_back"></i> Evidence Gap Map</router-link>
           </nav>
         </header>
         <!-- <div v-if="loading" class="d-flex justify-content-center">
@@ -1669,7 +1816,7 @@
               </h1>
               <p class="my-0"><span class="text-uppercase font-weight-lighter">author:</span> {{ document_details['Author(s)'].join(', ') }}</p>
               <p class="my-0"><span class="text-uppercase font-weight-lighter">published by:</span> {{ document_details['Publishing Institution(s)'].join(', ') }}<span v-if="document_details['Year']">, {{ document_details['Year'] }}</span></p>
-              <a v-if="document_details['Internet URL of Document']" class="btn btn-dark btn-lg" id="view-document-link" :href="document_details['Internet URL of Document']" target="_blank" role="button">View Document <i class="fas fa-external-link-alt ml-2"></i></a>
+              <a v-if="document_details['Internet URL of Document']" class="btn btn-dark btn-lg" id="view-document-link" :href="document_details['Internet URL of Document']" target="_blank" role="button">View Document <i tabindex="0"class="fas fa-external-link-alt ml-2"></i></a>
             </div>
           </div>
 
@@ -1689,7 +1836,7 @@
                 </div>
 
         <h4>Contribute Improvements</h4>
-        <p>Anything amiss? We invite you to contribute additions or corrections to this document description using this <a href="https://forms.gle/c5XrdNq1iRm4vYWy9">form</a>.</p>
+        <p>Anything amiss? We invite you to contribute additions or corrections to this document description using this <button tabindex="0" class="router-button"  onclick="location.href='https://forms.gle/c5XrdNq1iRm4vYWy9'">form</button>.</p>
               </div>
               <div class="col-sm-5 col-lg-4">
                 <ul class="list-group mt-3">
@@ -1735,7 +1882,7 @@
                   </li>
                   <li v-if="document_details['Internet URL of Document']" class="list-group-item">
                     <h5 class="mb-1">Internet URL</h5>
-                    <p class="mb-0 text-small"><a :href="document_details['Internet URL of Document']" target="_blank">{{ document_details['Internet URL of Document'] || '---' | truncate(45) }}</a></p>
+                    <p class="mb-0 text-small" tabindex="0"><a   tabindex="0":href="document_details['Internet URL of Document']" target="_blank">{{ document_details['Internet URL of Document'] || '---' | truncate(45) }}</a></p>
                   </li>
                   <li v-if="document_details['USAID-Funded?']" class="list-group-item">
                     <h5 class="mb-1">USAID Funded</h5>
@@ -1749,22 +1896,22 @@
       </div>
     </script>
     <script type="text/x-template" id="relevant-docs-modal-component">
-      <div v-if="!isHidden">
+      <div v-if="!isHidden" >
         <!-- <transition name="modal"> -->
-          <div class="modal-mask">
-            <div class="modal modal-wrapper" tabindex="-1">
-              <div class="modal-dialog modal-lg modal-dialog-scrollable">
-                <div class="modal-content">
+          <div class="modal-mask" >
+            <div class="modal modal-wrapper">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable" role="dialog">
+                <div class="modal-content" role="dialog" tabindex="0" id="focus_modal_close">
                   <div class="modal-header">
                     <h5 class="modal-title">
                       <span class="badge badge-secondary badge-pill mr-1">{{ state.num_relevant_docs }}</span>
                       Relevant Documents
                     </h5>
-                    <button type="button" class="close" @click="$emit('close-docs-modal')">
+                    <button  id="focus_button" type="button" class="close" @click="$emit('close-docs-modal')"  role="button"  tabindex="0">
                       <span>&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body p-0">
+                  <div class="modal-body p-0" tabindex="0">
                     <div class="card-header">
                       <p class="mb-0 text-uppercase font-weight-lighter">
                         {{ state.value_title }}
@@ -1787,7 +1934,7 @@
                         </h6>
                         <ul class="list-group list-group-flush">
                           <li v-for="doc in docs_in_categories[doc_type]" :key="doc['Document ID']" class="list-group-item">
-                            <router-link :to="{ name: 'details', params: { id: doc['Document ID'], document: doc } }" >{{ doc['Document Title'] }}<span v-if="doc['Year']">, <em>{{ doc['Year'] }}</em></span></router-link>
+                            <router-link tag="button" class="router-button" :to="{ name: 'details', params: { id: doc['Document ID'], document: doc } }" >{{ doc['Document Title'] }}<span v-if="doc['Year']" >, <em>{{ doc['Year'] }}</em></span></router-link>
                           </li>
                         </ul>
                       </template>
@@ -1801,10 +1948,10 @@
       </div>
     </script>
     <script type="text/x-template" id="matrix-cell-component" src="js/components/matrix-cell-component.js">
-      <div class="square" v-bind:style="{ background: 'rgba(' + color_base + ',' + count/100 + ')'}">
-        <a class="count" v-show="count > 0" @click="$emit('show-docs-modal')" v-bind:style="{ color: 'rgb(' + color_base + ')'}">
+      <div style= "text-align:center"  tabindex = "0" class="square" v-bind:style="{ background: 'rgba(' + color_base + ',' + count/100 + ')'}">
+        <button style= "padding:0" id="focus_modal_button" role="status"  tabindex = "0" class="count btn shadow-none" v-show="count > 0" @click="$emit('show-docs-modal')" v-bind:style="{ color: 'rgb(' + color_base + ')'}"  >
           {{count}}
-        </a>
+        </button>
       </div>
     </script>
 
@@ -1846,6 +1993,13 @@
       $(function() {
         $('[data-toggle="popover"]').popover()
         $('[data-toggle="tooltip"]').tooltip()
+      });
+
+      $(document).on('click','#focus_modal_button',function(e){	
+          $('#focus_button').focus();
+      });
+      $(document).on('click','#focus_modal_button_back',function(e){	
+        $('#focus_button').focus();
       });
     </script>
 
