@@ -710,7 +710,16 @@ ul.list-spaced li {
   margin-top: .25rem;
   margin-bottom: 0;
 }
-.jump{
-  float: right;  
-  padding-right: 20px;
+.skip-link {
+  background: #319795;
+  color: #fff;
+  font-weight: 700;
+  /* left: 50%; */
+  padding: 4px;
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+.skip-link:focus {
+  transform: translateY(0%);
 }
