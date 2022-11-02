@@ -7,8 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <title>EGM FAQ</title>
+    <meta name="description" role = "banner" content="" />
+    <title role="banner">EGM FAQ</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -33,10 +33,10 @@
         <div class="container" id="top-container">
           <div class="row mt-3 mb-2 align-items-center">
             <div class="col-md-6 col-lg-5">
-              <a href="./">
+              <button button tabindex="0" class="router-button"  onclick="location.href='./'">
                 <h1 id="egm-title" class="my-0 text-vb-lt-blue"><span>Private Sector Engagement</span><br/>Evidence Gap Map</h1>
-                <h5 id="egm-tagline" class="mt-1 mb-0 text-soft font-weight-light">Engagement mapped to key values</h5>
-              </a>
+                <h2 id="egm-tagline" class="mt-1 mb-0 text-soft font-weight-light header5">Engagement mapped to key values</h2>
+              </button>
             </div>
             <div class="col-md-6 col-lg-7">
               <p class="p-inst text-soft mt-2 mb-0 d-none d-md-block">
@@ -58,11 +58,11 @@
         <li class="nav-item">
           <!-- <a class="nav-link" href="#">Instructions</a> -->
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="faq.html">FAQ</a>
+        <li class="nav-item" >
+          <button tabindex="0" class="nav-link nav-button active" onclick="location.href='./faq.html'">FAQ</button>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./files/EVIDENCE_GAP_MAP_USER_MANUAL.pdf" target="_blank">EGM Instructions</a>
+          <button  tabindex="0"class="nav-link nav-button" onclick="location.href='./files/EVIDENCE_GAP_MAP_USER_MANUAL.pdf'" target="_blank">EGM Instructions</button>
         </li>
       </ul>
     </div>
@@ -75,10 +75,10 @@
     <main role="main">
 
       <div class="container mt-4 mb-5">
-          <a href="./" class="text-secondary"><i class="fas fa-chevron-left mr-2"></i> Evidence Gap Map</a>
-          <h1 class="my-3">Frequently Asked Questions</h1>
+          <button onclick="location.href='./'" class="text-secondary nav-button" tabindex="0"><i class="fas fa-chevron-left mr-2"></i> Evidence Gap Map</button>
+          <h1 class="my-3" id="Body">Frequently Asked Questions</h1>
           <h4>What was the reason for creating this map?</h4>
-          <p>One of the operational principles of the <a href="https://www.usaid.gov/sites/default/files/documents/1865/usaid_psepolicy_final.pdf" target="_blank">PSE policy</a> is to build and act on the evidence of what works, and what does not, in PSE. <a href="https://www.usaid.gov/work-usaid/private-sector-engagement/evidence-and-learning-plan" target="_blank">The PSE Evidence and Learning Plan</a> guides the Agency on learning what works and hasn’t on PSE and contributes to the Agency’s <a href="https://www.usaid.gov/selfreliance/self-reliance-learning-agenda" target="_blank">Self-Reliance Learning Agenda (SRLA)</a>. The PSE Evidence Gap Map will serve as a regularly updated PSE evidence repository.</p>
+          <p>One of the operational principles of the <button tabindex="0" class="router-button"  onclick="location.href='https://www.usaid.gov/sites/default/files/documents/1865/usaid_psepolicy_final.pdf'"> PSE policy</button> is to build and act on the evidence of what works, and what does not, in PSE. <button tabindex="0" class="router-button"  onclick="location.href='https://www.usaid.gov/work-usaid/private-sector-engagement/evidence-and-learning-plan'" target="_blank">The PSE Evidence and Learning Plan</button> guides the Agency on learning what works and hasn’t on PSE and contributes to the Agency’s <button tabindex="0" class="router-button"  onclick="location.href='https://www.usaid.gov/selfreliance/self-reliance-learning-agenda'" target="_blank">Self-Reliance Learning Agenda (SRLA)</button>. The PSE Evidence Gap Map will serve as a regularly updated PSE evidence repository.</p>
           <p>We hope the PSE Evidence Gap Map will facilitate use of evidence in PSE approaches and help target evidence-building efforts to fill the knowledge gaps that remain. The tool consolidates what is known and unknown about PSE via a thorough literature review (internal and external for the last ten years), highlighting gaps.</p>
           <p>It can be filtered by geography, sector, industry, private sector type, and document type. The next version will have a search function to search terms in the key findings, recommendations, title, partner, and publishing institution.</p>
           <p>USAID’s Program Cycle Operational Policy, as articulated in ADS 201, stipulates that “USAID’s decisions about where and how to invest foreign-assistance resources must depend on analyses and conclusions supported by evidence.” The policy further elucidates that the evidence base comprises “formal assessments, evaluations, and studies conducted by USAID or other development actors…[as well as] structured thinking based on experiences, insights, and internalized knowledge.”<sup>1</sup> The mandate for USAID staff to use evidence in program design, management, and implementation is clear in this and other USAID documentation.</p>
@@ -100,7 +100,7 @@
           <p>The most valuable application of the map is for people to use it to use the filters and categories to get at the evidence that is most directly relevant to one’s context. In this way, instead of seeing the EGM as a repository of hundreds of resources, one can see it as a tool to weed out those PSE resources that are not useful for informing clear and present evidence needs. There is also a search functionality in case users would like to further query the repository using key words that go beyond the built-in filters.</p>
 
           <ol class="border-top mt-5 pt-3">
-            <li><a href="https://www.usaid.gov/sites/default/files/documents/1870/201.pdf" target="_blank">https://www.usaid.gov/sites/default/files/documents/1870/201.pdf</a></li>
+            <li><button tabindex="0" class="router-button"  onclick="location.href='https://www.usaid.gov/sites/default/files/documents/1870/201.pdf'" target="_blank">https://www.usaid.gov/sites/default/files/documents/1870/201.pdf</button></li>
           </ol>
       </div>
 
@@ -120,40 +120,40 @@
               <div class="col-lg-9">
                 <div class="row brand-line">
                   <div class="col-sm-3 py-3">
-                    <a href="https://stemedhub.org/groups/laserpulse/aboutus" target ="_blank">
+                    <button tabindex="0" class="router-button"  onclick="location.href='https://stemedhub.org/groups/laserpulse/aboutus'" target ="_blank">
                     <img
                       src="images/purdue-laser-pulse.png"
                       class="img-fluid img-65"
                       alt="Purdue LASER PULSE logo"
                     />
-                    </a>
+                    </button>
                   </div>
                   <div class="col-sm-3 py-3">
-                    <a href="https://www.nd.edu" target ="_blank">
+                    <button tabindex="0" class="router-button"  onclick="location.href='https://www.nd.edu'" target ="_blank">
                     <img
                       src="images/nd_mark_blue.png"
                       class="img-fluid img-50"
                       alt="Notre Dame logo"
                     />
-                    </a>
+                    </button>
                   </div>
                   <div class="col-sm-3 py-3">
-                    <a href="https://www.usaid.gov" target ="_blank">
+                    <button tabindex="0" class="router-button"  onclick="location.href='https://www.usaid.gov'" target ="_blank">
                     <img
                       src="images/usaid-logo.png"
                       class="img-fluid img-65"
                       alt="USAID Dame"
                     />
-                    </a>
+                    </button>
                   </div>
                   <div class="col-sm-3 py-3">
-                    <a href="https://www.purdue.edu" target ="_blank">
+                    <button tabindex="0" class="router-button"  onclick="location.href='https://www.purdue.edu'" target ="_blank">
                     <img
                       src="images/purdue.png"
                       class="img-fluid img-50"
                       alt="Purdue logo"
                     />
-                  </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -173,9 +173,8 @@
             </div>
             <div class="col-md-6">
               <p class="text-white-50 mb-0 text-center text-md-right">
-                <a class="text-reset" href="https://pulte.nd.edu"
-                  >Pulte Institute for Global Development</a
-                >
+                <button tabindex="0" class="router-button text-reset"  onclick="location.href='https://pulte.nd.edu'"
+                  >Pulte Institute for Global Development</button>
               </p>
             </div>
           </div>
