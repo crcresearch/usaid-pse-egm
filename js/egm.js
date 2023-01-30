@@ -317,6 +317,12 @@ const details = {
     }
   },
   computed: {
+    document_summary: function () {
+      if (this.document_details['Document Summary']) {
+        return this.document_details['Document Summary'].split('\n');
+      }
+      return [];
+    },
     document_findings: function () {
       if (this.document_details['Key Findings']) {
         return this.document_details['Key Findings'].split('\n');

@@ -23,6 +23,11 @@ const ALLOWED_FIELDS = [
     isFiltered: false
   },
   {
+    name: 'Document Summary',
+    isArray: false,
+    isFiltered: false
+  },
+  {
     name: 'Key Findings',
     isArray: false,
     isFiltered: false
