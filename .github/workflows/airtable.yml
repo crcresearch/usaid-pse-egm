@@ -4,6 +4,8 @@ on:
   release:
     types:
       - published
+  schedule:
+    - cron: '35 18 * * *'
 
 jobs:
   fetch_and_save:
