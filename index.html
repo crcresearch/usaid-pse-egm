@@ -200,13 +200,9 @@
 
 
               <div class="row no-gutters align-items-center" role="menubar">
-
-                <div class="col-md-11">
+                <div class="col-md-12">
                   <div class="row no-gutters filters" id="filter-row">
-    
-
-
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <vue-multiselect role="menu" v-model="filters.region" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['USAID Region']" @input="filter_change">
                         <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }" >
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
@@ -222,7 +218,7 @@
                         </option>
                       </select> -->
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <vue-multiselect role="menu" v-model="filters.country" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Country(ies)']" @input="filter_change" >
                         <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
@@ -235,7 +231,7 @@
                         </template>
                       </vue-multiselect>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <vue-multiselect role="menu" v-model="filters.technical_sector" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Technical Sector']" @input="filter_change">
                         <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
@@ -245,7 +241,7 @@
                         </template>
                       </vue-multiselect>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <vue-multiselect role="menu" v-model="filters.industry" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Private Sector Industry']" @input="filter_change">
                         <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
@@ -261,7 +257,9 @@
                         </option>
                       </select> -->
                     </div>
-                    <div class="col-md-2">
+                </div>
+                  <div class="row no-gutters filters" id="filter-row">
+                    <div class="col-md-4">
                       <vue-multiselect role="menuitem" v-model="filters.enterprise_type" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Type of Enterprise']" @input="filter_change" >
                         <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
@@ -277,7 +275,7 @@
                         </option>
                       </select> -->
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                       <vue-multiselect role="menu" v-model="filters.resource_type" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Type of Document']" @input="filter_change" >
                         <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
                           <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
@@ -293,14 +291,24 @@
                         </option>
                       </select> -->
                     </div>
-
-
+                    <div class="col-md-4">
+                      <vue-multiselect role="menu" v-model="filters.year" :searchable="false" :multiple="true" :showLabels="false" :closeOnSelect="false" :options="filter_categories['Year']" @input="filter_change" >
+                        <template role="menuitem" tabindex="0" slot="selection" slot-scope="{ values }">
+                          <span class="multiselect__single" v-if="values.length > 1">{{ values.length }} options selected</span>
+                          <span class="multiselect__single" v-else-if="values.length === 1">{{ values[0] }}</span>
+                          <span class="multiselect__single" v-else>Year</span>
+                        </template>
+                      </vue-multiselect>
+                    </div>
                 </div>
-              </div>
 
-              <div class="col-md-1 text-center text-md-left">
-                <button  tabindex="0" class="btn btn-light btn-sm rounded-pill ml-2 mt-2 mt-md-1 text-small" role="button" title="Reset filters" @click="reset_filters" ><i class="fas fa-redo"></i> Reset</>
+              <div class="row no-gutters filters">
+              <div class="col-md-2 offset-md-5 text-center justify-content-center">
+                <button  tabindex="0" class=" mx-auto btn btn-light btn-sm rounded-pill ml-2 mt-2 mt-md-1 text-small" role="button" title="Reset filters" @click="reset_filters" ><i class="fas fa-redo"></i> Reset Filters</button>
               </div>
+            </div>
+          </div>
+
             </div> <!-- end filters -->
 
               <div class="row pt-3 justify-content-center">
