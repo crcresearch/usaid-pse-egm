@@ -49,7 +49,8 @@ const relevantDocumentsModal = {
     },
     docs_in_categories: function () {
       // categorize each document by its type
-      return this.doc_types.reduce((acc, doc_type) => ({ ...acc, [doc_type]: this.state.relevant_docs.filter(doc => doc['Type of Document'] === doc_type) }), {});
+      let docs =  this.state.relevant_docs.sort((a,b) => ((Number(a['Year'] ? a['Year'] : 0) < Number(b['Year'] ? b['Year'] : 0)) ? 1 : (Number(b['Year'] ? b['Year'] : 0) < Number(a['Year'] ? a['Year'] : 0)) ? -1 : 0))
+      return this.doc_types.reduce((acc, doc_type) => ({ ...acc, [doc_type]: docs.filter(doc => doc['Type of Document'] === doc_type) }), {});
     }
   },
   template: '#relevant-docs-modal-component'
@@ -286,7 +287,8 @@ const list = {
     },
     docs_in_categories: function () {
       // categorize each document by its type
-      return this.doc_types.reduce((acc, doc_type) => ({ ...acc, [doc_type]: this.filtered_documents.filter(doc => doc['Type of Document'] === doc_type) }), {});
+      let docs =  this.filtered_documents.sort((a,b) => ((Number(a['Year'] ? a['Year'] : 0) < Number(b['Year'] ? b['Year'] : 0)) ? 1 : (Number(b['Year'] ? b['Year'] : 0) < Number(a['Year'] ? a['Year'] : 0)) ? -1 : 0))
+      return this.doc_types.reduce((acc, doc_type) => ({ ...acc, [doc_type]: docs.filter(doc => doc['Type of Document'] === doc_type) }), {});
     }
   },
   template: '#list-component',

@@ -722,3 +722,7 @@ ul.list-spaced li {
 .skip-link:focus {
   transform: translateY(0%);
 }
+
+.publication-row {
+  margin-bottom: 30px;
+}

@@ -171,6 +171,9 @@
                     <li class="nav-item" role="menuitem" >
                       <button  tabindex="0"class="nav-link nav-button" onclick="location.href='./files/EVIDENCE_GAP_MAP_USER_MANUAL.pdf'" target="_blank">EGM Instructions</button>
                     </li>
+                    <li class="nav-item" role="menuitem" >
+                      <button  tabindex="0"class="nav-link nav-button" onclick="location.href='./publications.html'">Publications</button>
+                    </li>
                   </ul>
                 </div>
               </nav>
@@ -1880,9 +1883,10 @@
                     <h5 class="mb-1">USAID Region</h5>
                     <p class="mb-0"v-for="(region, index) in document_details['USAID Region']" :key="region" >{{region}}</p>
                   </li>
-                  <li v-if="document_details['Internet URL of Document']" class="list-group-item">
+                  <li class="list-group-item">
                     <h5 class="mb-1">Internet URL</h5>
-                    <p class="mb-0 text-small" tabindex="0"><a   tabindex="0":href="document_details['Internet URL of Document']" target="_blank">{{ document_details['Internet URL of Document'] || '---' | truncate(45) }}</a></p>
+                    <p v-if="document_details['Internet URL of Document']" class="mb-0 text-small" tabindex="0"><a   tabindex="0":href="document_details['Internet URL of Document']" target="_blank">{{ document_details['Internet URL of Document'] || '---' | truncate(45) }}</a></p>
+                    <p v-else class="mb-0 text-small">Not Available</p>
                   </li>
                   <li v-if="document_details['USAID-Funded?']" class="list-group-item">
                     <h5 class="mb-1">USAID Funded</h5>
