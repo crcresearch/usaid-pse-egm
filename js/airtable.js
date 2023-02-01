@@ -105,7 +105,7 @@ const ALLOWED_FIELDS = [
   {
     name: 'Year',
     isArray: false,
-    isFiltered: false
+    isFiltered: true
   }
 ];
 
