@@ -22,7 +22,7 @@ for (i = 0; i < records.length; i++) {
             /*console.log(endpoint, data.status);*/
           })
           .catch((error) => {
-            console.log([doc_id, endpoint, error.code].join('\t'))
+            // console.log([doc_id, endpoint, error.code].join('\t'))
             failed_links.push({documentId: doc_id, url: endpoint, error: error.code})
         })})
     );
