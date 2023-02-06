@@ -16,7 +16,7 @@ jobs:
           ref: master
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 18
       - name: npm install
         run: npm ci
       - name: Fetch data from Airtable API
