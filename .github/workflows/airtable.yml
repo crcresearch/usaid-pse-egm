@@ -30,7 +30,7 @@ jobs:
       - name: Check Link Responses
         run: |
           OUTPUT_FILE_NAME=reports_`date +%s`.json
-          npm run --silent airtable | tee link_reports/$OUTPUT_FILE_NAME
+          npm run --silent linkcheck | tee link_reports/$OUTPUT_FILE_NAME
           ln -sf $OUTPUT_FILE_NAME link_reports/latest.json
       - name: Push changes to repo
         run: |
