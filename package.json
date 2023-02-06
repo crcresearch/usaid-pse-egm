@@ -20,7 +20,7 @@
   "homepage": "https://github.com/crcresearch/usaid-pse-egm#readme",
   "dependencies": {
     "airtable": "^0.10.1",
-    "axios": "^1.3.1",
+    "axios": "^1.3.2",
     "csv": "^6.2.6",
     "csvtojson": "^2.0.10",
     "lite-server": "^2.5.4"
