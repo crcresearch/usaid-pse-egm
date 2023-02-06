@@ -27,11 +27,17 @@ jobs:
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+      - name: Check Link Responses
+        run: |
+          OUTPUT_FILE_NAME=reports_`date +%s`.json
+          npm run --silent airtable | tee link_reports/$OUTPUT_FILE_NAME
+          ln -sf $OUTPUT_FILE_NAME link_reports/latest.json
       - name: Push changes to repo
         run: |
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git config user.name "${{ github.actor }}"
           git add data/$OUTPUT_FILE_NAME data/latest.json
+          git add data/$OUTPUT_FILE_NAME link_reports/latest.json
           git status
           git commit -m "Triggered automated Airtable data fetch via release on $(date)"
           git push

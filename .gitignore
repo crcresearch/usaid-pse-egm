@@ -109,3 +109,4 @@ dist
 
 # Local Node Environment
 nenv
+.DS_Store
